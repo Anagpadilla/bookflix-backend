@@ -61,14 +61,14 @@ const updateBook = async (req, res) => {
 //Eliminar un libro
 const deleteBook = async (req, res) => {
   const { bookId } = req.params;
-  await Admin.deleteBook(bookId);
-  console.log('Libro eliminado');
+  const books = await Admin.deleteBook(bookId);
+  res.json(books);
 };
 //Eliminar un usuario
 const deleteUser = async (req, res) => {
   const { userId } = req.params;
-  await Admin.deleteUser(userId);
-  console.log('Usuario eliminado');
+  const users = await Admin.deleteUser(userId);
+  res.json(users);
 };
 
 module.exports = {

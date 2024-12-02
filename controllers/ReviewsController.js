@@ -20,7 +20,6 @@ const getBookReviews = async (req, res) => {
   const { bookId } = req.params;
   const reviews = await Reviews.getBookReviews(bookId);
   res.json(reviews);
-  console.log('Obteniendo reseñas del libro');
 };
 
 module.exports = { createNewReview, getBookReviews };

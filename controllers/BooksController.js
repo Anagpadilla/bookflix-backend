@@ -4,7 +4,6 @@ const Book = require('../models/BooksModel');
 const getAllBooks = async (req, res) => {
   const books = await Book.getAllBooks();
   res.json(books);
-  console.log('Obteniendo libros');
 };
 //Obtenemos los detalles de un libro
 const getBookDetails = async (req, res) => {
